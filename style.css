@@ -207,4 +207,33 @@
     color: #2a3b5f;
 }
 /* End About Us  */
+/* Start Works  */
+.works {
+    padding: 0px 100px;
+    margin-bottom: 162px;
+}
+.works h1{
+    font-size: 40px;
+    /* width: 400px; */
+    color: #2a3b5f;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+.works .works-imgs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.works .works-imgs img{
+    width: 300px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.works h5 {
+    text-align: center;
+    color: #ff3e4b;
+    cursor: pointer;
+}
+/* End Works  */
 
