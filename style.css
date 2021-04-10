@@ -47,6 +47,7 @@
     color: #ff3e4b;
     cursor: pointer;
     border: 1px solid #ff3e4b;
+    font-weight: bold;
     padding: 9px 15px;
     text-align: center;
     margin-left: 30px;
@@ -102,6 +103,7 @@
     color: #ff3e4b;
 }
 .home-button-touch {
+    color: #000;
     background-color: transparent;
     margin-left: 20px;
     border: 1px solid #FFF;
@@ -111,3 +113,98 @@
     background-color: #ff3e4b;
 } 
 /* End Home  */
+/* Start Services  */
+.services {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 162px;
+}
+.services .text-services {
+    width: 250px;
+    margin: 0px 40px;
+}
+.services .text-services h1 {
+    color: #19348d;
+    margin-bottom: 20px;
+}
+.services .text-services button {
+    width: 150px;
+    color: #FFF;
+    font-weight: bold;
+    border: #FFF;
+    padding: 5px 0px;
+    border-radius: 10px;
+    background-color: #ff3e4b;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.services .text-services button:hover {
+    color: #ff3e4b;
+    background-color: #FFF;
+    border: 1px solid #ff3e4b; 
+}
+.services .card-services { 
+    width: 280px;
+    padding: 20px 30px;
+    border-radius: 20px;
+    margin: 0px 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    transition: 2s;
+} 
+.services .card-content:hover .card-services {
+    transform: rotateY(180deg);
+    display: none;
+}
+
+.services .card-services i{ 
+    font-size: 50px;
+    margin-bottom: 40px;
+    color: #19348d;
+} 
+.services .card-services h3 {
+    margin-bottom: 40px;
+    color: #19348d;
+}
+.services .card-services p {
+    line-height: 1.4;
+    color: #2a3b5f;
+}
+/* End Services  */
+/* Start About Us  */
+.about {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 162px;
+}
+.about .about-image {
+    width: 100%;
+    background-image: url("./imgs/about.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 600px;
+    margin-top: -80px;
+} 
+.about .about-text {
+    width: 1000px;
+}
+.about .about-text h3{
+    color: #ff3e4b;
+    margin-bottom: 20px;
+}
+.about .about-text h1{
+    color: #19348d;
+    font-weight: bolder;
+    font-size: 40px;
+    width: 300px;
+    margin-bottom: 40px;
+}
+.about .about-text p{
+    width: 400px;
+    line-height: 1.5;
+    color: #2a3b5f;
+}
+/* End About Us  */
+
