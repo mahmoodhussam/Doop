@@ -17,7 +17,6 @@ document.addEventListener("scroll", HeaderScroll);
 let works_imgs = document.querySelectorAll('.works-imgs img');
 works_imgs.forEach(img =>{
     img.addEventListener("click" , (e)=>{
-        document.removeEventListener("scroll", HeaderScroll)
         let popup_overlay = document.createElement("div");
         popup_overlay.classList.add("popup-overlay");
         document.body.appendChild(popup_overlay);
@@ -32,7 +31,6 @@ works_imgs.forEach(img =>{
         popup_overlay.appendChild(popup_close);
         popup_close.addEventListener("click", (e)=>{
             popup_overlay.remove();
-            document.addEventListener("scroll", HeaderScroll);
         });
     })
 });
