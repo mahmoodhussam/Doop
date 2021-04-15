@@ -12,4 +12,5 @@ document.addEventListener("scroll", (e)=>{
     prevScroll = currentScroll;
 });
 
-// 
+
+
