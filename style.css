@@ -156,30 +156,54 @@ html {
     background-color: #FFF;
     border: 1px solid #ff3e4b; 
 }
-.services .card-services { 
+
+
+.services .cards { 
     width: 280px;
-    padding: 20px 30px;
+    height: 400px;
     border-radius: 20px;
     margin: 0px 40px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
     transition: 2s;
 } 
-.services .card-content:hover .card-services {
+.inner-cards {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    height: 100%;            
+    transition: transform .9s;
+    transform-style: preserve-3d;
+}
+.cards:hover .inner-cards {
     transform: rotateY(180deg);
-    display: none;
+}
+.front-cards, 
+.back-cards {
+    position: absolute;
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.front-cards img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.back-cards {
+    transform: rotateY(180deg);
+    background-color: #fff;
+    padding: 70px 30px;
+    border-radius: 20px;
 }
 
-.services .card-services i{ 
-    font-size: 50px;
-    margin-bottom: 40px;
-    color: #19348d;
-} 
-.services .card-services h3 {
+.services .back-cards h3 {
     margin-bottom: 40px;
     color: #19348d;
 }
-.services .card-services p {
+.services .back-cards p {
     line-height: 1.4;
     color: #2a3b5f;
 }
