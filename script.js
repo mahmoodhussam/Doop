@@ -3,12 +3,14 @@ let header = document.querySelector('.header');
 let prevScroll = 0 ;
 const HeaderScroll = (e) => {
     let currentScroll = window.pageYOffset;
-    if(currentScroll < prevScroll) {
-        header.style.top = '0px';
-    }else {
-        header.style.top = '-74px';
+    if(currentScroll > "74") {
+        if(currentScroll < prevScroll) {
+            header.style.top = '0px';
+        }else {
+            header.style.top = '-74px';
+        }
+        prevScroll = currentScroll;
     }
-    prevScroll = currentScroll;
 };
 document.addEventListener("scroll", HeaderScroll);
 
