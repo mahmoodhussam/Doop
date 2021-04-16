@@ -29,8 +29,11 @@ if(optionHeaderLocal != null) {
     else {
         console.log("add to no")
         document.querySelector(".option-header-answer .no").classList.add("active");
-        header.style.position = "relative";
+        header.style.position = "absolute";
         document.removeEventListener("scroll",HeaderScroll);
+        if(header.style.top = "-74px") [
+            header.style.top = "0px"
+        ]
     }
 }
 optionHeader.forEach(span => {
@@ -40,8 +43,11 @@ optionHeader.forEach(span => {
         });
         if(e.target.dataset.header == "no") {
             console.log("Header Scroll Remove")
-            header.style.position = "relative";
+            header.style.position = "absolute";
             document.removeEventListener("scroll", HeaderScroll);
+            if(header.style.top == "-74px") {
+                header.style.top = "0px";
+            }
         }
         else {
             console.log("Header Scroll Added");
