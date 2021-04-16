@@ -8,27 +8,47 @@ html {
     scroll-behavior: smooth;
 }
 /* Start Options  */
+.active {
+    opacity: 1 !important;
+}
 .options {
     position: fixed;
     top: 0;
     left: -250px;
     width: 250px;
     height: 100vh;
-    background-color: #FFF;
-    border: 1px solid #000;
+    background-color: #e0636c;
     z-index: 3;
     transition: 0.9s;
 }
 .options .setting-icon {
-    font-size: 20px;
-    text-align: right;
-    margin-right: -30px;
+    font-size: 30px;
+    margin-left: 250px;
     margin-top: 100px;
     cursor: pointer;
+    position: fixed;
 }
 .options .setting-icon i {
-    background-color: #FFF;
+    background-color: #e0636c;
+    color: #FFF;
+    border-radius: 10px;
     padding: 5px;
+}
+.options .option-box {
+    color: #FFF;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.options .option-box .option-header-answer {
+    margin-top: 20px;
+}
+.options .option-box .option-header-answer span {
+    margin: 0px 10px;
+    padding: 5px 10px;
+    background-color: #CCC;
+    cursor: pointer;
+    opacity: 0.7;
 }
 /* End Options  */
 
