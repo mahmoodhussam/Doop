@@ -13,7 +13,6 @@ const HeaderScroll = (e) => {
     }
 };
 document.addEventListener("scroll", HeaderScroll);
-
 // Images Gallery Clickable
 
 let works_imgs = document.querySelectorAll('.works-imgs img');
@@ -37,3 +36,16 @@ works_imgs.forEach(img =>{
     })
 });
 
+// Add Option Box 
+
+let options = document.querySelector(".options");
+let options_icon = document.querySelector(".options .setting-icon")
+options_icon.addEventListener("click" , ()=>{
+    console.log("Clicked To The Setting Icon")
+    if(options.style.left == "0px") {
+        options.style.left = "-250px";
+    }
+    else {
+        options.style.left = "0px";
+    }
+})

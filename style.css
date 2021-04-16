@@ -7,6 +7,31 @@
 html {
     scroll-behavior: smooth;
 }
+/* Start Options  */
+.options {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #FFF;
+    border: 1px solid #000;
+    z-index: 3;
+    transition: 0.9s;
+}
+.options .setting-icon {
+    font-size: 20px;
+    text-align: right;
+    margin-right: -30px;
+    margin-top: 100px;
+    cursor: pointer;
+}
+.options .setting-icon i {
+    background-color: #FFF;
+    padding: 5px;
+}
+/* End Options  */
+
 /* Start Home  */
 .home {
     width: 100%;
