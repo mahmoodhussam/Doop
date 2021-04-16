@@ -14,6 +14,50 @@ const HeaderScroll = (e) => {
 };
 document.addEventListener("scroll", HeaderScroll);
 
+// Options Setting 
+let menu = document.querySelector(".header-menu .menu");
+let optionHeaderLocal = localStorage.getItem("option-header");
+let optionHeader = document.querySelectorAll(".option-header-answer span");
+if(optionHeaderLocal != null) {
+    optionHeader.forEach(span =>{
+        span.classList.remove("active");
+    });
+    if(optionHeaderLocal == "yes") {
+        document.querySelector(".option-header-answer .yes").classList.add("active");
+        console.log("add to yes");
+    }
+    else {
+        console.log("add to no")
+        document.querySelector(".option-header-answer .no").classList.add("active");
+        header.style.position = "absolute";
+        document.removeEventListener("scroll",HeaderScroll);
+        if(header.style.top = "-74px") [
+            header.style.top = "0px"
+        ]
+    }
+}
+optionHeader.forEach(span => {
+    span.addEventListener("click", (e)=>{
+        optionHeader.forEach(ele=>{
+            ele.classList.remove("active");
+        });
+        if(e.target.dataset.header == "no") {
+            console.log("Header Scroll Remove")
+            header.style.position = "absolute";
+            document.removeEventListener("scroll", HeaderScroll);
+            if(header.style.top == "-74px") {
+                header.style.top = "0px";
+            }
+        }
+        else {
+            console.log("Header Scroll Added");
+            header.style.position = "fixed";
+            document.addEventListener("scroll", HeaderScroll);
+        }
+        localStorage.setItem("option-header", e.target.dataset.header);
+        e.target.classList.add("active");
+    });
+});
 // Images Gallery Clickable
 
 let works_imgs = document.querySelectorAll('.works-imgs img');
@@ -37,3 +81,15 @@ works_imgs.forEach(img =>{
     })
 });
 
+// Add Option Box 
+
+let options = document.querySelector(".options");
+let options_icon = document.querySelector(".options .setting-icon")
+options_icon.addEventListener("click" , ()=>{
+    if(options.style.left == "0px") {
+        options.style.left = "-250px";
+    }
+    else {
+        options.style.left = "0px";
+    }
+})
